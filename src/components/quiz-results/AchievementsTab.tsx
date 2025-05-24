@@ -118,40 +118,6 @@ const AchievementsTab = ({
           </div>
         </div>
       </div>
-
-      {/* Statistics */}
-      <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-        <div className="bg-gradient-to-r from-teal-500 to-teal-700 p-6">
-          <h2 className="text-2xl font-bold text-white">Your Coffee Journey</h2>
-        </div>
-        <div className="p-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-            <div className="border rounded-lg p-4 text-center">
-              <div className="text-3xl font-bold text-teal-600">{currentStreak}</div>
-              <div className="text-sm text-gray-600">Day Streak</div>
-            </div>
-            <div className="border rounded-lg p-4 text-center">
-              <div className="text-3xl font-bold text-teal-600">{earnedBadges.length}</div>
-              <div className="text-sm text-gray-600">Badges Earned</div>
-            </div>
-            <div className="border rounded-lg p-4 text-center">
-              <div className="text-3xl font-bold text-teal-600">350</div>
-              <div className="text-sm text-gray-600">Aroma Points</div>
-            </div>
-            <div className="border rounded-lg p-4 text-center">
-              <div className="text-3xl font-bold text-teal-600">5</div>
-              <div className="text-sm text-gray-600">Recipes Tried</div>
-            </div>
-          </div>
-          
-          <div className="text-center">
-            <p className="mb-4">Keep engaging with NESCAFÉ to grow your coffee journey!</p>
-            <Button className="bg-teal-500 hover:bg-teal-600 text-white">
-              View Full Stats
-            </Button>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
