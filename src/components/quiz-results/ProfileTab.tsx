@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
@@ -15,59 +14,59 @@ const ProfileTab = ({
   handleCopyCoupon 
 }: ProfileTabProps) => {
   return (
-    <>
-      <div className="text-center mb-8">
-        <div className="mb-4 inline-block p-4 rounded-full bg-white">
-          <div className="text-5xl">{persona.icon}</div>
-        </div>
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">Your Coffee Persona</h1>
-        <div className={`${persona.color} text-white font-bold py-2 px-6 rounded-full text-xl md:text-2xl inline-block mb-4`}>
-          {personaName}
-        </div>
-        <p className="text-lg text-nescafe-brown max-w-xl mx-auto">{persona.description}</p>
-      </div>
-
-      {/* Coffee Recommendation */}
-      <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
-        <h2 className="text-2xl font-bold p-6 bg-nescafe-red text-white">Your Perfect Coffee Match</h2>
-        <div className="p-6 flex flex-col md:flex-row items-center gap-6">
-          <div className="md:w-1/3">
-            <img 
-              src={persona.product.image} 
-              alt={persona.product.name} 
-              className="rounded-lg w-full h-auto object-cover"
-            />
+    <div className="flex justify-center">
+      <div className="bg-gradient-to-br from-amber-500 to-amber-700 rounded-3xl p-8 text-white max-w-md w-full shadow-2xl relative overflow-hidden">
+        {/* Decorative circles */}
+        <div className="absolute top-4 right-4 w-16 h-16 bg-white bg-opacity-20 rounded-full"></div>
+        <div className="absolute top-8 right-8 w-8 h-8 bg-white bg-opacity-30 rounded-full"></div>
+        
+        {/* Coffee Icon and Title */}
+        <div className="flex items-center gap-4 mb-6">
+          <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+            <span className="text-2xl">☕</span>
           </div>
-          <div className="md:w-2/3">
-            <h3 className="text-xl font-bold mb-2">{persona.product.name}</h3>
-            <p className="text-gray-700 mb-4">{persona.product.description}</p>
-            <Button className="bg-nescafe-red hover:bg-nescafe-brown text-white">
-              Shop Now
-            </Button>
+          <div>
+            <h2 className="text-2xl font-bold">Espresso Explorer</h2>
+            <p className="text-amber-100">Level 12 • Bold & Adventurous</p>
           </div>
         </div>
-      </div>
-
-      {/* Special Offer */}
-      <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-        <div className="bg-gradient-to-r from-nescafe-red to-nescafe-brown p-6">
-          <h2 className="text-2xl font-bold text-white">Your Special Offer</h2>
-        </div>
-        <div className="p-6">
-          <div className="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center mb-4">
-            <p className="text-sm text-gray-600 mb-1">Use this coupon code</p>
-            <p className="text-3xl font-bold mb-1">{persona.coupon}</p>
-            <p className="text-sm text-gray-600">for 20% off your next purchase</p>
+        
+        {/* Status Badges */}
+        <div className="flex gap-3 mb-8">
+          <div className="flex items-center gap-2 bg-white bg-opacity-20 rounded-full px-3 py-1 text-sm">
+            <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+            <span>AI Learning</span>
           </div>
-          <Button 
-            className="w-full bg-nescafe-red hover:bg-nescafe-brown text-white"
-            onClick={handleCopyCoupon}
-          >
-            Copy Code
-          </Button>
+          <div className="flex items-center gap-2 bg-white bg-opacity-20 rounded-full px-3 py-1 text-sm">
+            <span className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span>
+            <span>Adapting</span>
+          </div>
         </div>
+        
+        {/* Stats */}
+        <div className="grid grid-cols-3 gap-6 mb-8">
+          <div className="text-center">
+            <div className="text-3xl font-bold">47</div>
+            <div className="text-amber-100 text-sm">Day Streak</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold">23</div>
+            <div className="text-amber-100 text-sm">Recipes Tried</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold">8</div>
+            <div className="text-amber-100 text-sm">Achievements</div>
+          </div>
+        </div>
+        
+        {/* Customize Avatar Button */}
+        <Button 
+          className="w-full bg-white bg-opacity-20 hover:bg-white hover:bg-opacity-30 text-white border-0 backdrop-blur-sm rounded-2xl py-3 font-semibold transition-all duration-200"
+        >
+          Customize Avatar
+        </Button>
       </div>
-    </>
+    </div>
   );
 };
 

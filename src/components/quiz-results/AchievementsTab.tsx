@@ -1,7 +1,5 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { 
   Table,
   TableBody,
@@ -50,83 +48,6 @@ const AchievementsTab = ({
 }: AchievementsTabProps) => {
   return (
     <div className="space-y-8">
-      {/* Coffee Avatar Customization */}
-      <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-        <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-6">
-          <h2 className="text-2xl font-bold text-white">Your Coffee Avatar</h2>
-        </div>
-        <div className="p-6">
-          <div className="flex flex-col md:flex-row items-center gap-8">
-            <div className="md:w-1/3 flex justify-center">
-              <div className="relative">
-                <Avatar className="w-32 h-32 border-4 border-nescafe-red">
-                  <AvatarImage src={persona.image} />
-                  <AvatarFallback>{personaName[0]}</AvatarFallback>
-                </Avatar>
-                <div className="absolute -bottom-2 -right-2 bg-nescafe-red text-white rounded-full w-10 h-10 flex items-center justify-center text-lg">
-                  {persona.icon}
-                </div>
-              </div>
-            </div>
-            <div className="md:w-2/3">
-              <h3 className="text-xl font-bold mb-4">Customize Your Avatar</h3>
-              
-              <div className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium mb-1">Hair Style</label>
-                  <select 
-                    className="w-full p-2 border rounded-md"
-                    value={avatarCustomization.hairStyle}
-                    onChange={(e) => setAvatarCustomization({...avatarCustomization, hairStyle: e.target.value})}
-                  >
-                    <option value="short">Short</option>
-                    <option value="long">Long</option>
-                    <option value="curly">Curly</option>
-                    <option value="wavy">Wavy</option>
-                    <option value="bald">Bald</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium mb-1">Outfit</label>
-                  <select 
-                    className="w-full p-2 border rounded-md"
-                    value={avatarCustomization.outfit}
-                    onChange={(e) => setAvatarCustomization({...avatarCustomization, outfit: e.target.value})}
-                  >
-                    <option value="casual">Casual</option>
-                    <option value="business">Business</option>
-                    <option value="sporty">Sporty</option>
-                    <option value="creative">Creative</option>
-                    <option value="relaxed">Relaxed</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium mb-1">Accessory</label>
-                  <select 
-                    className="w-full p-2 border rounded-md"
-                    value={avatarCustomization.accessory}
-                    onChange={(e) => setAvatarCustomization({...avatarCustomization, accessory: e.target.value})}
-                  >
-                    <option value="coffee cup">Coffee Cup</option>
-                    <option value="laptop">Laptop</option>
-                    <option value="book">Book</option>
-                    <option value="headphones">Headphones</option>
-                    <option value="plant">Plant</option>
-                    <option value="none">None</option>
-                  </select>
-                </div>
-              </div>
-              
-              <Button className="mt-4 bg-blue-500 hover:bg-blue-600 text-white">
-                Save Avatar
-              </Button>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Leaderboard */}
       <div className="bg-white rounded-xl shadow-lg overflow-hidden">
         <div className="bg-gradient-to-r from-amber-500 to-orange-600 p-6">
